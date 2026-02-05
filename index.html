@@ -78,7 +78,7 @@
         100% { transform: scale(1); }
     }
 
-    /* START BUTTON (hidden until tap) */
+    /* START BUTTON */
     .btn {
         display: none;
         margin-top: 40px;
@@ -92,9 +92,6 @@
         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         animation: fadeIn 1s forwards;
     }
-
-    /* Hidden audio */
-    audio { display: none; }
 </style>
 </head>
 
@@ -122,17 +119,11 @@ for (let i = 0; i < 20; i++) {
 <!-- HEART BUTTON -->
 <div id="startHeart">💗</div>
 
-<!-- HIDDEN AUDIO -->
-<audio id="bgm" loop>
-    <source src="loveyou.mp3" type="audio/mpeg">
-</audio>
-
 <!-- START BUTTON -->
-<a href="page1.html" id="startBtn" class="btn">Start 💗</a>
+<a href="pages/page1.html" id="startBtn" class="btn">Start 💗</a>
 
 <script>
 document.getElementById("startHeart").addEventListener("click", () => {
-    document.getElementById("bgm").play();     // play music
     document.getElementById("startHeart").style.opacity = "0"; 
     setTimeout(() => {
         document.getElementById("startHeart").style.display = "none";

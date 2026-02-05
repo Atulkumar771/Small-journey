@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>4 Days 💗</title>
+<title>Your Journey Begins 💗</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
@@ -11,11 +11,11 @@
     body {
         margin: 0;
         padding: 25px;
-        background: #ffe6f2;
-        text-align: center;
+        background: #fff0f6;
         font-family: 'Poppins', sans-serif;
-        animation: fadeIn 1.5s ease;
+        text-align: center;
         overflow-x: hidden;
+        animation: fadeIn 1.5s ease;
     }
 
     @keyframes fadeIn {
@@ -23,48 +23,47 @@
         to { opacity: 1; }
     }
 
-    /* Floating Hearts */
+    /* NEW Premium Floating Hearts */
     .heart {
         position: fixed;
         bottom: -20px;
-        font-size: 23px;
-        color: #ff5fa2;
-        animation: floatUp 6s linear infinite;
-        opacity: 0.7;
+        font-size: 30px;
+        animation: float 8s linear infinite;
+        opacity: 0.75;
+        color: #ff4f8b;
+        text-shadow: 0 0 15px #ff99c8, 0 0 30px #ff66a3;
         pointer-events: none;
     }
 
-    @keyframes floatUp {
-        from { transform: translateY(0); }
-        to { transform: translateY(-120vh); }
+    @keyframes float {
+        0% {
+            transform: translateY(0) scale(1);
+            opacity: 0.9;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-120vh) scale(1.4);
+            opacity: 0;
+        }
     }
 
-    .title {
-        font-family: 'Great Vibes', cursive;
+    h1 {
+        margin-top: 80px;
         font-size: 2.5em;
         color: #d81b60;
-        margin-top: 40px;
-        opacity: 0;
-        animation: fadeUp 1.5s forwards;
+        font-family: 'Great Vibes', cursive;
+        text-shadow: 0 0 8px #ff96c7;
     }
 
-    .line {
-        margin-top: 20px;
-        font-size: 1.4em;
+    .msg {
+        font-size: 1.3em;
         color: #a80052;
+        margin-top: 20px;
+        line-height: 1.6em;
         opacity: 0;
-        animation: fadeUp 1.5s forwards;
-        animation-delay: 0.8s;
-    }
-
-    .seasons {
-        margin-top: 10px;
-        font-size: 1.6em;
-        color: #ff4f8b;
-        font-weight: 600;
-        opacity: 0;
-        animation: fadeUp 1.5s forwards;
-        animation-delay: 1.5s;
+        animation: fadeUp 1.5s forwards 0.6s;
     }
 
     @keyframes fadeUp {
@@ -72,45 +71,45 @@
         to { opacity: 1; transform: translateY(0); }
     }
 
-    .btn {
-        display: inline-block;
-        margin-top: 50px;
+    .next-btn {
+        margin-top: 55px;
         padding: 14px 32px;
         background: #ff4f8b;
         color: white;
         border-radius: 30px;
-        font-size: 1.3em;
+        font-size: 1.4em;
         text-decoration: none;
         font-weight: 600;
-        opacity: 0;
         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        animation: fadeIn 1.5s forwards;
-        animation-delay: 2.5s;
+        opacity: 0;
+        animation: fadeIn 1.5s forwards 3s;
     }
 </style>
 </head>
 
 <body>
 
-<!-- Floating Hearts -->
+<!-- Floating Hearts Script -->
 <script>
-for (let i = 0; i < 18; i++) {
+for (let i = 0; i < 25; i++) {
     let h = document.createElement("div");
     h.className = "heart";
-    h.style.left = Math.random() * 100 + "vw";
-    h.style.animationDelay = (Math.random() * 4) + "s";
     h.innerHTML = "💗";
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.animationDelay = Math.random() * 5 + "s";
+    h.style.fontSize = (Math.random() * 20 + 20) + "px"; 
     document.body.appendChild(h);
 }
 </script>
 
-<div class="title">Can I love you for 4 days?</div>
+<h1>There are 3 most beautiful things in the world… 💗</h1>
 
-<div class="line">Spring, Summer, Autumn and Winter.</div>
+<div class="msg">
+    Let me show you what your heart already knows.<br>
+    Tap next to continue my love. 💞
+</div>
 
-<div class="seasons">🌸 ☀️ 🍁 ❄️</div>
-
-<a href="page2.html" class="btn">Next 💗</a>
+<a href="page2.html" class="next-btn">Next ➜</a>
 
 </body>
 </html>

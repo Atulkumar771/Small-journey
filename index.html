@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You, My Sriyuuu 💗</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        padding: 25px;
+        background: #ffe6f2;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        overflow-x: hidden;
+        animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Floating Hearts */
+    .heartFloat {
+        position: fixed;
+        bottom: -20px;
+        font-size: 24px;
+        color: #ff5fa2;
+        animation: floatUp 6s linear infinite;
+        opacity: 0.7;
+        pointer-events: none;
+    }
+
+    @keyframes floatUp {
+        from { transform: translateY(0); }
+        to { transform: translateY(-120vh); }
+    }
+
+    h1 {
+        font-family: 'Great Vibes', cursive;
+        font-size: 3em;
+        color: #d81b60;
+        margin-top: 50px;
+        text-shadow: 0 0 12px #ff9acb;
+    }
+
+    .msg {
+        font-size: 1.3em;
+        color: #a80052;
+        margin-top: 15px;
+        opacity: 0;
+        animation: fadeUp 1.5s forwards 0.5s;
+    }
+
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* HEART BUTTON */
+    #startHeart {
+        font-size: 4em;
+        margin-top: 60px;
+        cursor: pointer;
+        animation: pulse 1.5s infinite;
+        color: #ff4f8b;
+        text-shadow: 0 0 15px #ff9ac8;
+        opacity: 1;
+        transition: 0.5s ease;
+    }
+
+    @keyframes pulse {
+        0%   { transform: scale(1); }
+        50%  { transform: scale(1.25); }
+        100% { transform: scale(1); }
+    }
+
+    /* START BUTTON (hidden until tap) */
+    .btn {
+        display: none;
+        margin-top: 40px;
+        padding: 14px 32px;
+        background: #ff4f8b;
+        color: white;
+        border-radius: 30px;
+        font-size: 1.4em;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        animation: fadeIn 1s forwards;
+    }
+
+    /* Hidden audio */
+    audio { display: none; }
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<script>
+for (let i = 0; i < 20; i++) {
+    let h = document.createElement("div");
+    h.className = "heartFloat";
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.animationDelay = (Math.random() * 4) + "s";
+    h.innerHTML = "💗";
+    document.body.appendChild(h);
+}
+</script>
+
+<h1>For You, My Sriyuuu 💗</h1>
+
+<div class="msg">
+    A small journey of my heart…<br>
+    Tap the heart to begin.
+</div>
+
+<!-- HEART BUTTON -->
+<div id="startHeart">💗</div>
+
+<!-- HIDDEN AUDIO -->
+<audio id="bgm" loop>
+    <source src="loveyou.mp3" type="audio/mpeg">
+</audio>
+
+<!-- START BUTTON -->
+<a href="page1.html" id="startBtn" class="btn">Start 💗</a>
+
+<script>
+document.getElementById("startHeart").addEventListener("click", () => {
+    document.getElementById("bgm").play();     // play music
+    document.getElementById("startHeart").style.opacity = "0"; 
+    setTimeout(() => {
+        document.getElementById("startHeart").style.display = "none";
+        document.getElementById("startBtn").style.display = "inline-block"; 
+    }, 600);
+});
+</script>
+
+</body>
+</html>

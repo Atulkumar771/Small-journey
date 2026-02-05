@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sun, Moon & You ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        padding: 25px;
+        background: #fff0f6;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        overflow-x: hidden;
+        animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Floating Hearts */
+    .heart {
+        position: fixed;
+        bottom: -20px;
+        font-size: 26px;
+        color: #ff4f8b;
+        animation: float 7s linear infinite;
+        opacity: 0.75;
+        pointer-events: none;
+    }
+
+    @keyframes float {
+        from { transform: translateY(0); opacity: 0.9; }
+        to { transform: translateY(-120vh); opacity: 0; }
+    }
+
+    h1 {
+        margin-top: 50px;
+        font-size: 2.4em;
+        color: #d81b60;
+        font-family: 'Great Vibes', cursive;
+        text-shadow: 0 0 8px #ff96c7;
+    }
+
+    .line {
+        font-size: 1.4em;
+        margin-top: 25px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeUp 1.5s forwards;
+        color: #a80052;
+    }
+
+    @keyframes fadeUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Navigation Button */
+    .next-btn {
+        margin-top: 40px;
+        padding: 14px 32px;
+        background: #ff4f8b;
+        color: white;
+        border-radius: 30px;
+        font-size: 1.3em;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        display: inline-block;
+        opacity: 0;
+        animation: fadeIn 1.5s forwards 12s;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<script>
+for (let i = 0; i < 20; i++) {
+    let h = document.createElement("div");
+    h.className = "heart";
+    h.innerHTML = "💗";
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.animationDelay = Math.random() * 4 + "s";
+    document.body.appendChild(h);
+}
+</script>
+
+<h1>The Sun, The Moon… and You ❤️</h1>
+
+<!-- Poem Lines -->
+<div class="line" style="animation-delay: 0.5s;">Can I love you for 4 days?</div>
+<div class="line" style="animation-delay: 1.8s;">Spring, Summer, Autumn and Winter… 💗</div>
+
+<div class="line" style="animation-delay: 3.0s;">Oh! No, maybe 3 days…</div>
+<div class="line" style="animation-delay: 4.3s;">Yesterday, Today and Tomorrow ✨</div>
+
+<div class="line" style="animation-delay: 5.8s;">What about 2 days?</div>
+<div class="line" style="animation-delay: 7.0s;">Day and Night 🌙</div>
+
+<div class="line" style="animation-delay: 8.3s;">Maybe 1 day is enough…</div>
+<div class="line" style="animation-delay: 9.6s;">Everyday. 💞</div>
+
+<!-- Next Button -->
+<a href="page3.html" class="next-btn">Next ➜</a>
+
+</body>
+</html>

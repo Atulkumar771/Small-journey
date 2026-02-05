@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You… Forever ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        padding: 25px;
+        background: #fff0f6;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        overflow-x: hidden;
+        animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Floating Hearts */
+    .heart {
+        position: fixed;
+        bottom: -20px;
+        font-size: 26px;
+        color: #ff4f8b;
+        animation: float 7s linear infinite;
+        opacity: 0.75;
+        pointer-events: none;
+    }
+    @keyframes float {
+        from { transform: translateY(0); opacity: 0.9; }
+        to { transform: translateY(-120vh); opacity: 0; }
+    }
+
+    h1 {
+        margin-top: 60px;
+        font-size: 2.4em;
+        font-family: 'Great Vibes', cursive;
+        color: #d81b60;
+        text-shadow: 0 0 15px #ff96c7;
+        opacity: 0;
+        animation: fadeUp 1.5s forwards 0.5s;
+    }
+
+    .line {
+        font-size: 1.5em;
+        margin-top: 28px;
+        color: #a80052;
+        opacity: 0;
+        animation: fadeUp 1.5s forwards;
+    }
+
+    .sun { animation-delay: 1.8s; }
+    .moon { animation-delay: 3.0s; }
+    .you { 
+        animation-delay: 4.2s; 
+        color: #ff2e80;
+        font-weight: 600;
+        text-shadow: 0 0 12px #ff8fcf;
+    }
+
+    .reason {
+        margin-top: 40px;
+        font-size: 1.3em;
+        color: #a80052;
+        opacity: 0;
+        animation: fadeUp 1.5s forwards 6s;
+        line-height: 1.6em;
+    }
+
+    .signature {
+        margin-top: 40px;
+        font-family: 'Great Vibes', cursive;
+        font-size: 2.2em;
+        color: #ff4f8b;
+        opacity: 0;
+        animation: fadeIn 1.5s forwards 8s;
+    }
+
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn {
+        margin-top: 40px;
+        padding: 14px 32px;
+        background: #ff4f8b;
+        color: white;
+        border-radius: 30px;
+        font-size: 1.3em;
+        text-decoration: none;
+        font-weight: 600;
+        opacity: 0;
+        animation: fadeIn 1.5s forwards 9s;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+</style>
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<script>
+for (let i = 0; i < 20; i++) {
+    let h = document.createElement("div");
+    h.className = "heart";
+    h.innerHTML = "💗";
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.animationDelay = Math.random() * 4 + "s";
+    document.body.appendChild(h);
+}
+</script>
+
+<h1>I love 3 things in this world…</h1>
+
+<div class="line sun">🌞 The Sun</div>
+<div class="line moon">🌙 The Moon</div>
+<div class="line you">❤️ And You</div>
+
+<div class="reason">
+    The sun for the morning,<br>
+    The moon for the night,<br>
+    And you… forever. 💗
+</div>
+
+<div class="signature">— Atul 💗</div>
+
+<a href="../index.html" class="btn">Back to Beginning</a>
+
+</body>
+</html>
